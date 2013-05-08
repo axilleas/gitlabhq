@@ -1,7 +1,7 @@
 ### Create a backup of the GitLab system
 
 Creates a backup archive of the database and all repositories. This archive will be saved in backup_path (see `config/gitlab.yml`).
-The filename will be `[TIMESTAMP]_gitlab_backup.tar`. This timestamp can be used to restore an specific backup.
+The filename will be `[TIMESTAMP]_gitlab_backup.tar`. This timestamp can be used to restore a specific backup.
 
 ```
 bundle exec rake gitlab:backup:create RAILS_ENV=production
@@ -42,10 +42,10 @@ Deleting old backups... [SKIPPING]
 bundle exec rake gitlab:backup:restore RAILS_ENV=production
 ```
 
-Options:
+If more than one backup exists, you must define the `[TIMESTAMP]` you want to restore:
 
 ```
-BACKUP=timestamp_of_backup (required if more than one backup exists)
+bundle exec rake gitlab:backup:restore RAILS_ENV=production BACKUP=[TIMESTAMP]
 ```
 
 Example output:

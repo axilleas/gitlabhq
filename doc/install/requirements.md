@@ -11,7 +11,7 @@ GitLab officially supports (recent versions of) these Linux distributions:
 
 It should also work on (though they are not officially supported):
 
-- Arch
+- Archlinux
 - CentOS
 - Fedora
 - Gentoo
@@ -41,7 +41,8 @@ some work on your part.
 
 ## CPU
 
-We recommend a processor with **4 cores**. At a minimum you need a processor with 2 cores to responsively run an unmodified installation.
+We recommend a processor with **4 cores**. At a minimum you need a processor
+with 2 cores to responsively run an unmodified installation.
 
 ## Memory
 
@@ -54,9 +55,16 @@ We recommend a processor with **4 cores**. At a minimum you need a processor wit
 
 The necessary hard drive space largely depends on the size of the repos you want
 to store in GitLab. But as a *rule of thumb* you should have at least twice as much
-free space as your all repos combined take up. You need twice the storage because [GitLab satellites](structure.md) contain an extra copy of each repo. Apart from a local hard drive you can also mount a volume that supports the network file system (NFS) protocol. This volume might be located on a file server, a network attached storage (NAS) device, a storage area network (SAN) or on an Amazon Web Services (AWS) Elastic Block Store (EBS) volume.
+free space as your all repos combined take up. You need twice the storage because
+[GitLab satellites](structure.md) contain an extra copy of each repo. Apart from a
+local hard drive you can also mount a volume that supports the network file system
+(NFS) protocol. This volume might be located on a file server, a network attached
+storage (NAS) device, a storage area network (SAN) or on an Amazon Web Services
+(AWS) Elastic Block Store (EBS) volume.
 
-If you have enough RAM memory and a recent CPU the speed of GitLab is mainly limited by hard drive seek times. Having a fast drive (7200 RPM and up) or a solid state drive (SSD) will improve the responsiveness of GitLab.
+If you have enough RAM memory and a recent CPU the speed of GitLab is mainly limited
+by hard drive seek times. Having a fast drive (7200 RPM and up) or a solid state
+drive (SSD) will improve the responsiveness of GitLab.
 
 
 # Installation troubles and reporting success or failure

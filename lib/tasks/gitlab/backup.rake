@@ -68,7 +68,7 @@ namespace :gitlab do
       puts "no backups found" if file_list.count == 0
       if file_list.count > 1 && ENV["BACKUP"].nil?
         puts "Found more than one backup, please specify which one you want to restore:"
-        puts "rake gitlab:backup:restore BACKUP=timestamp_of_backup"
+        puts "bundle exec rake gitlab:backup:restore BACKUP=timestamp_of_backup"
         exit 1
       end
 
