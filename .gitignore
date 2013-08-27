@@ -9,6 +9,7 @@ coverage/*
 backups/*
 *.swp
 public/uploads/
+public/assets/
 .rvmrc
 .rbenv-version
 .directory
