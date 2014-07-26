@@ -5,8 +5,8 @@
     = render "layouts/flash"
     .container
       .content
-        .login-title
-          %h1= brand_title
+        .login-title.custom-login
+          = image_tag 'foss_banner_trans.png'
     %hr
     .container
       .content
@@ -18,15 +18,15 @@
               .brand_text
                 = brand_text
             - else
-              .brand-image.default-brand-image.hidden-sm.hidden-xs
-                = image_tag 'brand_logo.png'
-              .brand_text.hidden-xs
-                %h2 Open source software to collaborate on code
+              .brand-image.hidden-sm.hidden-xs
+                = image_tag 'Foss_retro_logo.jpg'
+              .brand_text.hidden-xs.custom-login
+                %h2 GitLab server για τις ανάγκες των μελών της κοινότητας Ελεύθερου Λογισμικού ΕΜΠ
 
-                %p.lead
-                  Manage git repositories with fine grained access controls that keep your code secure.
-                  Perform code reviews and enhance collaboration with merge requests.
-                  Each project can also have an issue tracker and a wiki.
+                %p.lead.custom-login
+                  Οι εγγραφές είναι ανοιχτές για τα μέλη της Πολυτεχνειακής κοινότητας.
+                  Πληροφορίες για το πως θα ανεβάσετε τον κώδικά σας θα βρείτε στο
+                  = link_to "Wiki.", "https://foss.ntua.gr/wiki/index.php/GitLab"
 
           .col-md-5
             = yield
@@ -34,5 +34,8 @@
     .container
       .footer-links
         = link_to "Explore", explore_root_path
-        = link_to "Documentation", "http://doc.gitlab.com/"
+        = link_to "Wiki", "https://foss.ntua.gr/wiki/"
+        = link_to "Forum", "https://talk.foss.ntua.gr/"
+        = link_to "Mailing List", "https://lists.ntua.gr/mailman/listinfo/foss-general"
+        = link_to "IRC", "irc://chat.freenode.net:6697/foss.ntua"
         = link_to "About GitLab", "https://about.gitlab.com/"
